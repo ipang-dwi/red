@@ -7,13 +7,13 @@ on:
       - master
       
   schedule:
-  - cron: "30 * * * *"
+  - cron: "10 * * * *"
 
 jobs:
   auto_commit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2      
+      - uses: actions/checkout@v3      
         with:
          persist-credentials: false
          fetch-depth: 0
