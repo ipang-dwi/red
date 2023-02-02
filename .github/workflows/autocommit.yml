@@ -28,7 +28,6 @@ jobs:
           git config --local user.email "admin@firstplato.com"
           git config --local user.name "ipang-dwi"
           git add -A
-          git config --global --add safe.directory /github/workspace
           
           arr[0]="feat: :tiger: auto commit"
           arr[1]="feat: :rabbit: auto commit"
@@ -44,9 +43,8 @@ jobs:
           git commit -m "${arr[$rand]}"
           
       - name: GitHub Push
-        uses: ad-m/github-push-action@v0.5.0
+        uses: ad-m/github-push-action@v0.6.0
         with:
-          force: true
           directory: "."
           github_token: ${{ secrets.GITHUB_TOKEN }}
        
