@@ -28,6 +28,7 @@ jobs:
           git config --local user.email "admin@firstplato.com"
           git config --local user.name "ipang-dwi"
           git add -A
+          git config --global --add safe.directory /github/workspace
           
           arr[0]="feat: :tiger: auto commit"
           arr[1]="feat: :rabbit: auto commit"
